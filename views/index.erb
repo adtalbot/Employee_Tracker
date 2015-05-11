@@ -1,0 +1,25 @@
+<h1> Here are all the divisions </h1>
+ <ul>
+   <% @divisions.each do |division| %>
+   <li><a href='/division/<%=division.id%>'><%= division.div_name %> </a></li>
+     <% end %>
+ </ul>
+
+ <form action="/add_division" method='post'>
+   <input id='new_division' name='new_division_test' type='text'>
+   <label id='new_division' for='new_division'>Enter a new division</label>
+   <button type="submit" class='btn btn-success'>Add division</button>
+ </form>
+
+ <h1> Here are all the employees </h1>
+ <ul>
+   <% @employees.each do |employee| %>
+   <li><a href='/employee/<%=employee.id%>'><%= employee.emp_name %> </a></li>
+   <% end %>
+ </ul>
+
+<form action="/add_employee" method="post">
+  <input id="new_employee" name="new_employee_test" type="text">
+  <label id="new_employee" for="new_employee">Enter a new employee</label>
+  <button type="submit" class='btn btn-success'>Add employee</button>
+</form>
