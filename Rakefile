@@ -1,7 +1,6 @@
-development:
-  adapter: postgresql
-  database: to_do_development
+require("sinatra/activerecord")
+require("sinatra/activerecord/rake")
 
-test:
-  adapter: postgresql
-  database: to_do_test
+namespace(:db) do
+  task(:load_config)
+end
